@@ -85,6 +85,7 @@ network-config-manager/
 ![Topology](images/cisco-cml-topology.png)
 
 
+
 ```bash
 
 &nbsp;  python -m venv venv
@@ -280,3 +281,14 @@ python main.py --help
 python main.py --list
 
 
+## 📖 Complete Setup Guide
+
+For detailed step-by-step instructions, see our comprehensive [Installation Guide](INSTALLATION_GUIDE.md) which includes:
+
+- Complete development environment setup
+- Testing environment configuration (CML/DevNet)
+- GitHub integration workflow
+- Troubleshooting common issues
+- Advanced configuration options
+
+**Download the guide:** [INSTALLATION_GUIDE.md](INSTALLATION_GUIDE.md)
