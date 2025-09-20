@@ -53,6 +53,22 @@ def display_devices(devices):
         print("   Description: {}".format(device.get('description', 'No description')))
         print()
 
+def prepare_device_for_netmiko(device):
+    """
+    Prepare device configuration for Netmiko by removing extra fields
+    """
+    # Create a copy and remove fields that Netmiko doesn't expect
+    netmiko_device = {}
+    
+    # Only include fields that Netmiko expects
+    netmiko_fields = ['host', 'username', 'password', 'device_type', 'timeout', 'conn_timeout', 'port']
+    
+    for field in netmiko_fields:
+        if field in device:
+            netmiko_device[field] = device[field]
+    
+    return netmiko_device
+
 if __name__ == "__main__":
     # Test the configuration reader
     devices = load_devices()

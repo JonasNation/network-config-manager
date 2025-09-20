@@ -1,18 +1,19 @@
 # Network Device Inventory
-# Add your actual network devices here
+# Testing devices in CML
 
 devices:
-  - name: "test-device"
-    host: "192.168.1.10"
+  - name: "TestRouter"
+    host: "192.168.1.100"
     device_type: "cisco_ios"
     username: "admin"
-    description: "Test device for development"
+    description: "CML CSR1000v Router for testing"
     
-  - name: "core-switch"
-    host: "10.0.1.1" 
+  - name: "SW1"
+    host: "192.168.1.101" 
     device_type: "cisco_ios"
-    username: "netadmin"
-    description: "Core network switch"
+    username: "admin"
+    description: "CML IOSv Switch for testing"
 
 # Supported device types:
 # cisco_ios, cisco_xe, juniper, arista_eos, hp_comware
+# Note: Passwords handled in application for security

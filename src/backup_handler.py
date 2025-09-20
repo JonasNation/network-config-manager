@@ -7,6 +7,7 @@ Handles configuration backup operations for network devices
 import os
 from datetime import datetime
 from netmiko import ConnectHandler
+from .config_reader import prepare_device_for_netmiko
 
 def create_backup_filename(device_name, backup_dir="backups"):
     """
@@ -26,8 +27,11 @@ def backup_device_config(device_info):
     try:
         print("Connecting to {}...".format(device_name))
         
+        # Prepare device info for Netmiko (remove extra fields)
+        netmiko_device = prepare_device_for_netmiko(device_info)
+        
         # Establish SSH connection
-        connection = ConnectHandler(**device_info)
+        connection = ConnectHandler(**netmiko_device)
         
         # Get running configuration
         print("Retrieving configuration...")
@@ -69,7 +73,7 @@ def backup_multiple_devices(devices):
     
     for device in devices:
         # Add password (in real app, this would be secure)
-        device['password'] = 'password'  # Placeholder
+        device['password'] = 'admin'  # CML default password
         
         success, backup_file = backup_device_config(device)
         

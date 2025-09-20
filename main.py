@@ -44,9 +44,9 @@ def main():
             device = find_device_by_name(devices, args.device)
             if device:
                 print("Testing connection to: {}".format(device['name']))
-                # Add password (in real app, this would be secure)
-                device['password'] = 'password'  # Placeholder
-                test_device_connection(device)
+                # Add password securely
+                device_with_password = add_password_to_device(device)  # Placeholder
+                test_device_connection(device_with_password)
             else:
                 print("Device '{}' not found in inventory".format(args.device))
         else:
@@ -66,8 +66,8 @@ def main():
             if device:
                 print("Backing up device: {}".format(device['name']))
                 # Add password (in real app, this would be secure)
-                device['password'] = 'password'  # Placeholder
-                backup_device_config(device)
+                device_with_password = add_password_to_device(device)  # Placeholder
+                backup_device_config(device_with_password)
             else:
                 print("Device '{}' not found in inventory".format(args.device))
         else:
@@ -94,6 +94,15 @@ def find_device_by_name(devices, name):
         if device.get('name') == name:
             return device
     return None
+
+def add_password_to_device(device):
+    """
+    Add password to device configuration
+    In a real application, this would read from secure storage
+    """
+    device_copy = device.copy()
+    device_copy['password'] = 'admin'  # CML default password
+    return device_copy
 
 if __name__ == "__main__":
     main()
