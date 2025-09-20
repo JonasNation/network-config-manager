@@ -1,8 +1,8 @@
-\# Network Configuration Manager
+\# Network Configuration Manager 
 
 
 
-A Python-based tool for automating network device configuration management, backup, and monitoring.
+A Python-based tool for automating network device configuration management, backup, and monitoring. tested using my PC and Cisco Modeling Labs
 
 
 
