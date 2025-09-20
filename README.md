@@ -283,7 +283,7 @@ python main.py --list
 
 ## 📖 Complete Setup Guide
 
-For detailed step-by-step instructions, see our comprehensive [Installation Guide](INSTALLATION_GUIDE.md) which includes:
+For detailed step-by-step instructions, see my comprehensive [Installation Guide](INSTALLATION_GUIDE.md) which includes:
 
 - Complete development environment setup
 - Testing environment configuration (CML/DevNet)
