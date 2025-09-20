@@ -81,6 +81,9 @@ network-config-manager/
 ### Generated Backup Files
 ![Backup Files](images/backup-files.png)
 
+### CML Topology
+![Topology](images/cisco-cml-topology.png)
+
 
 ```bash
 
