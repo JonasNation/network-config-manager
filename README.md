@@ -2,7 +2,7 @@
 
 
 
-A Python-based tool for automating network device configuration management, backup, and monitoring. tested using my PC and Cisco Modeling Labs
+A Python-based tool for automating network device configuration management, backup, and monitoring. Tested using my PC and Cisco Modeling Labs
 
 
 
