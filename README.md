@@ -64,6 +64,24 @@ network-config-manager/
 
 2\. \*\*Create virtual environment:\*\*
 
+
+
+## Screenshots and Examples
+
+### Device Connectivity Testing
+![Connection Test](images/connection-test-to-router.png)
+![Connection Test](images/connection-test-to-switch.png)
+
+### Device Inventory
+![Device List](images/device-list.png)
+
+### Configuration Backup Process
+![Backup Process](images/backup-process.png)
+
+### Generated Backup Files
+![Backup Files](images/backup-files.png)
+
+
 ```bash
 
 &nbsp;  python -m venv venv
@@ -259,18 +277,3 @@ python main.py --help
 python main.py --list
 
 
-
-## Screenshots and Examples
-
-### Device Connectivity Testing
-![Connection Test](images/connection-test-to-router.png)
-![Connection Test](images/connection-test-to-switch.png)
-
-### Device Inventory
-![Device List](images/device-list.png)
-
-### Configuration Backup Process
-![Backup Process](images/backup-process.png)
-
-### Generated Backup Files
-![Backup Files](images/backup-files.png)
